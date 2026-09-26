@@ -11,6 +11,14 @@ const TimerDocs = () => {
         The <code>@Timer</code> annotation tracks the duration of a method execution. It automatically provides latency (max, sum, and count metrics).
       </p>
 
+      <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Supported Attributes</h2>
+      <ul className="list-disc pl-5 space-y-2 text-gray-600 mb-8">
+        <li><strong>name (String):</strong> The metric name (required).</li>
+        <li><strong>description (String):</strong> Metric description.</li>
+        <li><strong>tags (Tags[]):</strong> Array of dynamic or static tags.</li>
+        <li><strong>enable (boolean):</strong> Flag to temporarily disable the metric (default: <code>true</code>).</li>
+      </ul>
+
       <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Usage Example</h2>
       <p className="text-gray-600 mb-4">
         Here is a real-world example from the <code>portfolio-api</code>, tracking the execution of a user authentication method:

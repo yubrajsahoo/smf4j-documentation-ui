@@ -39,6 +39,7 @@ const GettingStarted = ({ version }) => {
              <li><strong className="text-indigo-600">Global Interceptors (New in 0.2.0):</strong> Automatically track incoming web requests without manually annotating every Controller!</li>
           )}
         </ul>
+
       </div>
     </div>
   );

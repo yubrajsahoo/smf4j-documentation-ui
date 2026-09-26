@@ -17,6 +17,29 @@ const GaugeDocs = () => {
         </p>
       </div>
 
+      <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Supported Attributes</h2>
+      <ul className="list-disc pl-5 space-y-2 text-gray-600 mb-8">
+        <li><strong>name (String):</strong> The metric name (required).</li>
+        <li><strong>description (String):</strong> Metric description.</li>
+        <li><strong>tags (Tags[]):</strong> Array of dynamic or static tags.</li>
+        <li><strong>expression (String):</strong> A SpEL expression to evaluate the value (e.g., <code>size()</code> for a List).</li>
+        <li><strong>enable (boolean):</strong> Flag to temporarily disable the metric (default: <code>true</code>).</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Method-Level Gauge with Expression</h2>
+      <p className="text-gray-600 mb-4">
+        You can use the <code>expression</code> attribute to dynamically evaluate the gauge value. For instance, returning the size of a collection:
+      </p>
+
+      <CodeBlock code={`
+@Gauge(
+    name = "queue.size", 
+    description = "Current tasks in queue",
+    expression = "size()"
+)
+private Queue<Task> taskQueue = new ConcurrentLinkedQueue<>();
+      `} />
+
       <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Field-Level Gauge Example</h2>
       <p className="text-gray-600 mb-4">
         You can directly annotate a numeric field (e.g. <code>AtomicLong</code>). This is perfect for keeping an in-memory count of lifetime logins:
