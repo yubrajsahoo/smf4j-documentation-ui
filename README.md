@@ -1,16 +1,35 @@
-# React + Vite
+# SMF4J Documentation UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is the interactive documentation user interface for **SMF4J** (Simple Metrics Facade for Java). It is built using **React**, **Vite**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## Running Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+To run the documentation site on your local machine for development or preview:
 
-## React Compiler
+1. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   This will start a local server, typically available at `http://localhost:5173`. Any changes you make will instantly reload in the browser.
 
-## Expanding the Oxlint configuration
+## Deploying to GitHub Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This project is fully configured to be hosted on GitHub Pages. 
+
+When you are ready to publish your latest changes to the live site, simply run:
+
+```bash
+npm run deploy
+```
+
+**What this does:**
+1. Runs `npm run build` to compile the optimized production files into the `dist` directory.
+2. Uses the `gh-pages` library to automatically push the contents of the `dist` folder to a branch named `gh-pages` in your remote repository.
+3. GitHub Pages will then automatically detect the update and deploy the site!
+
+*(Note: Ensure your GitHub repository settings under **Settings > Pages** are configured to serve from the `gh-pages` branch).*
