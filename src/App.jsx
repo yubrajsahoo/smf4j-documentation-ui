@@ -10,6 +10,9 @@ import GaugeDocs from './pages/GaugeDocs';
 import CounterDocs from './pages/CounterDocs';
 import SpELDocs from './pages/SpELDocs';
 import CustomLoggerDocs from './pages/CustomLoggerDocs';
+import FeaturesOverviewDocs from './pages/FeaturesOverviewDocs';
+import AdvancedFeaturesDoc from './pages/AdvancedFeaturesDoc';
+import MonitoringDocs from './pages/MonitoringDocs';
 import { DEFAULT_VERSION } from './constants/versions';
 
 
@@ -30,11 +33,14 @@ function App() {
               <Routes>
                 <Route path="/" element={<Navigate to="/docs/getting-started" replace />} />
                 <Route path="/docs/getting-started" element={<GettingStarted version={version} />} />
+                <Route path="/docs/features" element={<FeaturesOverviewDocs />} />
                 <Route path="/docs/architecture" element={<ArchitectureDocs />} />
+                <Route path="/docs/counter" element={<CounterDocs />} />
                 <Route path="/docs/timer" element={<TimerDocs />} />
                 <Route path="/docs/gauge" element={<GaugeDocs />} />
-                <Route path="/docs/counter" element={<CounterDocs />} />
                 <Route path="/docs/spel" element={<SpELDocs />} />
+                <Route path="/docs/advanced" element={<AdvancedFeaturesDoc />} />
+                <Route path="/docs/monitoring" element={<MonitoringDocs />} />
                 <Route path="/docs/custom-logger" element={<CustomLoggerDocs />} />
               </Routes>
             </div>

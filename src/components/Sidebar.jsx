@@ -1,17 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BookOpen, Layers, Clock, Activity, Hash, Code2, Terminal } from 'lucide-react';
+import { BookOpen, Layers, Clock, Activity, Hash, Code2, Terminal, Zap, Gauge, Radio } from 'lucide-react';
 import { URLS } from '../constants/urls';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const links = [
     { to: "/docs/getting-started", icon: <BookOpen className="w-5 h-5 mr-3" />, text: "Getting Started" },
+    { to: "/docs/features", icon: <Zap className="w-5 h-5 mr-3" />, text: "Features Overview" },
+    { to: "/docs/counter", icon: <Hash className="w-5 h-5 mr-3" />, text: "@Counter" },
     { to: "/docs/timer", icon: <Clock className="w-5 h-5 mr-3" />, text: "@Timer" },
     { to: "/docs/gauge", icon: <Activity className="w-5 h-5 mr-3" />, text: "@Gauge" },
-    { to: "/docs/counter", icon: <Hash className="w-5 h-5 mr-3" />, text: "@Counter" },
     { to: "/docs/spel", icon: <Code2 className="w-5 h-5 mr-3" />, text: "SpEL Tags" },
-    { to: "/docs/custom-logger", icon: <Terminal className="w-5 h-5 mr-3" />, text: "Custom Logger" },
+    { to: "/docs/advanced", icon: <Radio className="w-5 h-5 mr-3" />, text: "Advanced Features" },
+    { to: "/docs/monitoring", icon: <Gauge className="w-5 h-5 mr-3" />, text: "Monitoring & Observability" },
     { to: "/docs/architecture", icon: <Layers className="w-5 h-5 mr-3" />, text: "Architecture" },
+    { to: "/docs/custom-logger", icon: <Terminal className="w-5 h-5 mr-3" />, text: "Custom Logger" },
   ];
 
   return (
